@@ -1,19 +1,22 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import productsdata from "./Products/products(.js).txt";
 
-function App() {
-  console.log(productsdata);
-  return (
-    <div className="App">
-      {/* {productsdata.map(product => (
-        <div key={product.id}>
-          <h1>{product.title}</h1>
-        </div>
-      ))} */}
-    </div>
-  );
+import productsdata from "./Products/products.js";
+import Products from "./products"
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      text: ""
+    };
+  }
+  render() {
+    return (
+      <div className="App">
+        <Products />
+      </div>
+    );
+  }
 }
 
 export default App;
